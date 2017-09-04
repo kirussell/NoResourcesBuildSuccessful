@@ -1,0 +1,19 @@
+language: android
+
+jdk: oraclejdk8
+
+android:
+  components:
+    - platform-tools
+    - tools
+    - android-26
+    - build-tools-26.0.0
+    - extra
+
+script:
+    - ./gradlew clean assembleDebug
+
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.gradle
